@@ -1,0 +1,8 @@
+models:
+  Admin:
+    name: string
+    username: string unique
+    email: string unique
+    avatar: string
+    bio: text
+    password: text

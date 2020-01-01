@@ -1,0 +1,6 @@
+models:
+  Archive:
+    title: string
+    slug: string unique
+    file: string
+    description: text

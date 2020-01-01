@@ -1,0 +1,6 @@
+models:
+  Service:
+    title: string
+    slug: string unique
+    icon: string
+    description: text

@@ -1,0 +1,6 @@
+models:
+  Menu:
+    parent_id:  id:menu
+    name: string
+    link: string
+    order: double

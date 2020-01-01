@@ -1,0 +1,6 @@
+models:
+  Galery:
+    title: string
+    slug: string unique
+    image: string
+    description: text

@@ -1,0 +1,28 @@
+models:
+  Page:
+    title: string:400
+    slug: string unique
+    body: longtext
+
+controllers:
+  Page:
+    index:
+      query: all
+      render: page.index with:pages
+    create:
+      render: page.create
+    store:
+      validate: title, body
+      save: page
+      redirect: page.index
+    show:
+      render: page.show with:page
+    edit:
+      render: page.edit with:page
+    update:
+      validate: title, body
+      save: page
+      redirect: page.index
+    destroy:
+      delete: page
+      redirect: page.index

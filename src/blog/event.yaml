@@ -1,0 +1,7 @@
+models: 
+  Event:
+    title: string
+    slug: string
+    description: text
+    image: string
+    date: datetime

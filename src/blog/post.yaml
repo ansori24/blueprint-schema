@@ -1,0 +1,35 @@
+models:
+  Post:
+    user_id: id:user
+    category_id: id:category
+    title: string:400
+    featured_image: string nullable
+    featured_image_caption: string nullable
+    slug: string unique
+    excerpt: text
+    body: longtext
+    published_at: nullable timestamp
+    softdeletes: softdeletes
+
+controllers:
+  Post:
+    index:
+      query: all
+      render: post.index with:posts
+    create:
+      render: post.create
+    store:
+      validate: title, body
+      save: post
+      redirect: post.index
+    show:
+      render: post.show with:post
+    edit:
+      render: post.edit with:post
+    update:
+      validate: title, body
+      save: post
+      redirect: post.index
+    destroy:
+      delete: post
+      redirect: post.index
